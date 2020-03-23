@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+int i , length = 0;
+char string[50];
+gets(string);
+
+for( i = 0; string[i] != '\0'; i++){
+length++;
+}
+printf("The Length of string is %d ", length);
+}

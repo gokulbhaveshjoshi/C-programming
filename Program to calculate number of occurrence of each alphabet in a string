@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+	char string[100];
+	int i = 0 , count[26] = {0}, x ;
+	printf("Enter the string.\n");
+	gets(string);
+	while(string[i] != '\0'){
+		if(string[i] >= 'a' && string[i] <= 'z'){
+			x = string[i] -'a';
+			count[x]++;
+		}
+		i++;
+	}
+	for(i=0; i<26; i++){
+		printf("%c occur %d times \n", i + 'a', count[i]);
+	}
+	return 0;
+}
+
+
+
+
+

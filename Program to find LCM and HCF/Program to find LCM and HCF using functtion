@@ -1,0 +1,26 @@
+#include<stdio.h>
+long gcd(long, long);
+int main(){
+	long x, y, lcm, hcf;
+	printf("Enter two integer\n");
+	scanf("%ld%ld",&x, &y);
+	hcf = gcd(x, y);
+	lcm = (x*y)/hcf;
+	printf("HCF is %ld\nLcm is %ld",hcf, lcm);
+	return 0;
+}
+long gcd(long x, long y){
+	if(x==0){
+		return y;
+	}
+	while(y != 0 ){
+		if(x>y){
+			x = x - y;
+		}
+		else{
+			y = y - x;
+		}
+		
+	}
+	return x;
+}
